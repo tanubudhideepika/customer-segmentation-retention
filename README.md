@@ -15,11 +15,28 @@ Telecom companies lose 15–25% of customers annually. Blanket retention campaig
 | Retention Strategy | Simulation: revenue retained vs. campaign cost |
 
 ## Key Results
-- Identified 4 distinct customer personas with churn rates ranging from X% to X%
-- Segment-level XGBoost AUC: 0.XX – 0.XX
-- Highest-ROI retention target: **[Segment Name]** — XX% ROI, $XX,XXX estimated net value
 
-*(Update with actual results after running)*
+**Segmentation**
+- Identified 4 distinct customer personas with churn rates ranging from 40% to 65%
+- Most at-risk: **Low-Engagement Churner** (65% churn, recent customers with high monthly spend but low service adoption)
+- Most stable: **High-Value Loyal** (40% churn, longest tenure, highest service breadth)
+
+**Churn Model**
+- Overall XGBoost AUC: **0.60** (limited by small per-segment test sets)
+- Best segment model: **High-Value Loyal — AUC 0.81**
+- Overall top SHAP drivers: `Contract`, `tenure`, `MonthlyCharges`, `OnlineSecurity`, `TechSupport`
+- High-Value Loyal top drivers: `TotalCharges`, `tenure`, `MonthlyCharges`, `Contract` — spend accumulation matters more than contract type for loyal customers
+
+**Retention ROI Simulation**
+| Segment | Churn Prob | Customers Saved | ROI |
+|---|---|---|---|
+| At-Risk Mid-Tenure | 75.3% | 56 | **689.9%** |
+| Low-Engagement Churner | 49.5% | 25 | 436.8% |
+| New & Exploring | 48.0% | 22 | 391.5% |
+| High-Value Loyal | 29.3% | 23 | 385.0% |
+
+- **Priority target: At-Risk Mid-Tenure** — 690% ROI, $41,120 estimated net gain
+- All 4 segments ROI-positive; prioritize At-Risk for highest return per campaign dollar
 
 ## Project Structure
 ```
@@ -39,7 +56,7 @@ Telecom companies lose 15–25% of customers annually. Blanket retention campaig
 ```bash
 pip install -r requirements.txt
 # Download telco_churn.csv from Kaggle and place in data/
-python main/run_pipeline.py
+python notebooks/run_pipeline.py
 ```
 
 ## Dataset
