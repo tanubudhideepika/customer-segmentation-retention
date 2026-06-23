@@ -1,0 +1,49 @@
+# ── Data ────────────────────────────────────────────────────────────────────
+data/
+*.csv
+*.xlsx
+*.parquet
+*.json
+
+# ── Outputs (keep structure, ignore generated files) ────────────────────────
+outputs/*.png
+outputs/*.csv
+outputs/*.html
+
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+
+# ── Virtual Environments ─────────────────────────────────────────────────────
+.env
+.venv
+env/
+venv/
+ENV/
+
+# ── Jupyter Notebooks ────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── ML Artifacts ─────────────────────────────────────────────────────────────
+*.pkl
+*.joblib
+*.model
+*.bin
+mlruns/
+wandb/
+
+# ── IDE & OS ─────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
