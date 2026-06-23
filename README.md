@@ -49,7 +49,7 @@ Telecom companies lose 15–25% of customers annually. Blanket retention campaig
 │   ├── churn_model.py     # XGBoost churn classifier + SHAP
 │   └── retention_simulation.py  # Campaign ROI simulation
 ├── outputs/               # Charts & scored customer data
-└── requirements.txt
+└── requirements.txt       # Install
 ```
 
 ## Setup
