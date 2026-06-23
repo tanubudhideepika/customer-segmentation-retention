@@ -5,11 +5,6 @@ data/
 *.parquet
 *.json
 
-# ── Outputs (keep structure, ignore generated files) ────────────────────────
-outputs/*.png
-outputs/*.csv
-outputs/*.html
-
 # ── Python ──────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
