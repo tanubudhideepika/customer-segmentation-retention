@@ -41,7 +41,7 @@ Telecom companies lose 15–25% of customers annually. Blanket retention campaig
 ## Project Structure
 ```
 ├── data/                  # Raw dataset (not committed)
-├── notebooks/             # Pipeline scripts
+├── main/             # Pipeline scripts
 │   └── run_pipeline.py
 ├── src/
 │   ├── preprocess.py      # Data cleaning & RFM feature engineering
@@ -56,7 +56,7 @@ Telecom companies lose 15–25% of customers annually. Blanket retention campaig
 ```bash
 pip install -r requirements.txt
 # Download telco_churn.csv from Kaggle and place in data/
-python notebooks/run_pipeline.py
+python main/run_pipeline.py
 ```
 
 ## Dataset
